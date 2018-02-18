@@ -1,15 +1,17 @@
 #include "Enemy.h"
 #include <QTimer>
 #include <QGraphicsScene>
-#include <cstdlib> // for rand()
+#include <random>
 
 #include <QDebug>
 
 Enemy::Enemy()
 {
+    std::default_random_engine randEng((std::random_device())());
+    int randMax = 700; // TODO: this must be "scene.width - rect.width".
+    std::uniform_int_distribution<int> uniformDist(0, randMax);
     // set random position
-    int random_number = rand() % 700;
-    setPos(random_number, 0);
+    setPos(uniformDist(randEng), 0);
 
     // connect
     QTimer * timer = new QTimer();

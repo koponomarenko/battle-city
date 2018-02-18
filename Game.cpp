@@ -47,5 +47,6 @@ void Game::start()
 void Game::spawnEnemy()
 {
     Enemy * enemy = new Enemy();
+    // TODO: at this point 'move' was called at least one time before the item is on the scene. Need to check it.
     scene->addItem(enemy);
 }
