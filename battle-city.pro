@@ -24,8 +24,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp
+        main.cpp \
+    Game.cpp \
+    Tank.cpp \
+    Bullet.cpp \
+    Player.cpp \
+    Enemy.cpp
 
-HEADERS +=
+HEADERS += \
+    Game.h \
+    Tank.h \
+    Bullet.h \
+    Player.h \
+    Enemy.h
 
 FORMS +=
