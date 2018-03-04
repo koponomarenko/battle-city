@@ -7,6 +7,7 @@ Video game
 - Rename this function: setSpeed -> getSpeed
 - Delete all memory allocated with `new`
   - Delete Timer
+  - Currently there are memory leaks
 - Handle exceptions in constructor
 - Append '\_' to the end of class members names
 - Maybe use forward declaration
